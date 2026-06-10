@@ -105,8 +105,11 @@ To maximize evaluation scores based on the evaluation checklist parameters (**Wh
 4. Open your project's main operational file `MainActivity.kt` and paste the logical source framework, ensuring the top-level package namespace aligns correctly.
 5. Hit **Run** (`Shift + F10`) to test the application on your physical device or Android Emulator.
 
+Splash Screen:
 <img width="310" height="552" alt="Splash Screen" src="https://github.com/user-attachments/assets/b1d8f9d9-b6c5-4c42-8b82-f1b17252b76f" />
+Main Dash Screen:
 <img width="383" height="735" alt="Main Dashboard" src="https://github.com/user-attachments/assets/4deec8a0-e339-4a40-a326-830ac4670e08" />
+Checklist Screen:
 <img width="389" height="713" alt="Checklist" src="https://github.com/user-attachments/assets/5b7e30f0-fa8a-4567-abe3-14ca6b0da635" />
 
 
