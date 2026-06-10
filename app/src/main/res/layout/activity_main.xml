@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E2321"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/splashScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#121614"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⛺"
+            android:textSize="90sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Campsite Commander"
+            android:textColor="#A3C9A8"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Gear &amp; Supply Tracker"
+            android:textColor="#748E79"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏕️ Base Camp Dashboard"
+            android:textColor="#A3C9A8"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2D3531"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTAL ITEMS PACKED"
+                android:textColor="#748E79"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotalCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:textColor="#FFFFFF"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Adventure Gear"
+            android:textColor="#A3C9A8"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etItemName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Item Name (e.g., Rope)"
+            android:textColorHint="#55665C"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#A3C9A8"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etCategory"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Category (e.g., Safety)"
+            android:textColorHint="#55665C"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#A3C9A8"
+            android:inputType="text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/etQuantity"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="Qty"
+                android:textColorHint="#55665C"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#A3C9A8"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etComments"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="2"
+                android:hint="Packing Notes/Comments"
+                android:textColorHint="#55665C"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#A3C9A8"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnApplyAddGear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Gear"
+            android:backgroundTint="#4E6E58"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D3531"
+            android:layout_marginVertical="24dp"/>
+
+        <Button
+            android:id="@+id/btnViewDetailedList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Detailed Checklist"
+            android:backgroundTint="#2E4436"
+            android:textColor="#A3C9A8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailedScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 Manifest Checklist"
+            android:textColor="#A3C9A8"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#1A1F1D"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvDisplayList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Items Added Yet."
+                android:textColor="#E0E0E0"
+                android:textSize="15sp"
+                android:lineSpacingMultiplier="1.3"/>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnBackToBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Base"
+            android:backgroundTint="#4E6E58"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</FrameLayout>
